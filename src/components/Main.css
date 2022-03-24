@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: #ea5959;
+  height: 100vh;
+}

@@ -1,0 +1,81 @@
+.main-section {
+  flex-grow: 1;
+  padding-left: 54px;
+}
+
+.main__container {
+  width: 90%;
+}
+
+.task__input {
+  width: 90%;
+  background: #f3f3f3;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+
+.task__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task__list {
+  margin-top: 1.5rem;
+}
+
+.task__items {
+  display: flex;
+  align-items: center;
+}
+
+.task__checkbox,
+.task__name,
+.task__category {
+  margin-right: 1rem;
+}
+
+.task__container:hover .task__delete-icon {
+  display: block;
+}
+
+.task__delete-icon {
+  display: none;
+}
+
+.task__name {
+  color: #5a5a5a;
+  font-size: 18px;
+}
+
+.task__category {
+  background-color: #ea5959;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.task__category {
+  background-color: #ea5959;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.task__category-title {
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+}
+
+.trash__delete-icon-svg {
+  height: 20px;
+  width: 20px;
+  color: #ea5959;
+  cursor: pointer;
+}

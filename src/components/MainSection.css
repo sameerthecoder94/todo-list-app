@@ -58,15 +58,6 @@
   border-radius: 4px;
 }
 
-.task__category {
-  background-color: #ea5959;
-  height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-}
-
 .task__category-title {
   color: white;
   padding: 0.5rem 1rem;

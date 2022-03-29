@@ -1,9 +1,11 @@
-import './Main.css';
+import './MainComponent.css';
 import ContainerComponent from './ContainerComponent';
 
 const MainComponent = () => {
   return (
-    <div className="main"> {/* Main Orange Background */}
+    <div className='main'>
+      {' '}
+      {/* Main Orange Background */}
       <ContainerComponent /> {/* White box */}
     </div>
   );

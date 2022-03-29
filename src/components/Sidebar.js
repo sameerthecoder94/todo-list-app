@@ -1,3 +1,4 @@
+import { categories } from '../data';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -5,9 +6,11 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div>
         <p className='sidebar__item'>All</p>
-        <p className='sidebar__item'>Groceries</p>
-        <p className='sidebar__item'>Payments</p>
-        <p className='sidebar__item'>College</p>
+        {categories.map((category) => (
+          <p key={category.id} className='sidebar__item'>
+            {category.name}
+          </p>
+        ))}
       </div>
     </div>
   );

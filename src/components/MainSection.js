@@ -4,10 +4,25 @@ import { v4 as uuidv4 } from 'uuid';
 import TodoItem from './TodoItem';
 import './MainSection.css';
 
-const MainSection = () => {
+const MainSection = (props) => {
+  const { selectedCategory: selectedSidebarCategory } = props;
   const [inputValue, setInputValue] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [tasksList, setTasksList] = useState(tasks);
+
+  let filteredTasks = tasksList;
+
+  if (selectedSidebarCategory !== null) {
+    if (selectedSidebarCategory !== 'All') {
+      filteredTasks = tasksList.filter(function (task) {
+        if (task.category === selectedSidebarCategory) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    }
+  }
 
   function handleInputChange(e) {
     setInputValue(e.target.value);
@@ -57,7 +72,7 @@ const MainSection = () => {
         </div>
 
         <div className='task__list'>
-          {tasksList.map((task) => (
+          {filteredTasks.map((task) => (
             <TodoItem
               key={task.id}
               title={task.title}

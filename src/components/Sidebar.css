@@ -9,4 +9,11 @@
 .sidebar__item {
   font-size: 22px;
   color: #525252;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.sidebar__item:hover {
+  color: #ea5959;
 }

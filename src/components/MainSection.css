@@ -23,6 +23,8 @@
 
 .task__list {
   margin-top: 1.5rem;
+  height: 567px;
+  overflow: scroll;
 }
 
 .task__items {

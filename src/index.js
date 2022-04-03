@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainComponent from './components/MainComponent';
+import App from './components/App';
 
 const root = document.querySelector('#root');
 
-ReactDOM.render(<MainComponent />, root);
+ReactDOM.render(<App />, root);

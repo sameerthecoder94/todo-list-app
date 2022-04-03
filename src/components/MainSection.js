@@ -83,6 +83,11 @@ const MainSection = (props) => {
           <button onClick={addTodoItem}>Add Task</button>
         </div>
 
+        <p>
+          There are <strong>{filteredTasks.length} tasks</strong> in
+          total.
+        </p>
+
         <div className='task__list'>
           {filteredTasks.map((task) => {
             function toggleDone(e) {

@@ -1,7 +1,7 @@
-import './MainComponent.css';
+import './App.css';
 import ContainerComponent from './ContainerComponent';
 
-const MainComponent = () => {
+const App = () => {
   return (
     <div className='main'>
       {' '}
@@ -11,4 +11,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent;
+export default App;

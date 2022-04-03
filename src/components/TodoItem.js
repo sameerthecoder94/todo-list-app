@@ -1,6 +1,12 @@
 import React from 'react';
 
-const TodoItem = ({ title, category, done, toggleDone }) => {
+const TodoItem = ({
+  title,
+  category,
+  done,
+  toggleDone,
+  removeTask,
+}) => {
   return (
     <div className='task__container'>
       <div className='task__items'>
@@ -23,7 +29,7 @@ const TodoItem = ({ title, category, done, toggleDone }) => {
         </div>
       </div>
 
-      <p className='task__delete-icon'>
+      <p onClick={removeTask} className='task__delete-icon'>
         <svg
           className='trash__delete-icon-svg'
           xmlns='http://www.w3.org/2000/svg'

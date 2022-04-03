@@ -100,6 +100,13 @@ const MainSection = (props) => {
               setTasksList(updatedTasks);
             }
 
+            function removeTask() {
+              const updatedTasks = tasksList.filter(
+                (t) => t.id !== task.id
+              );
+              setTasksList(updatedTasks);
+            }
+
             return (
               <TodoItem
                 key={task.id}
@@ -107,6 +114,7 @@ const MainSection = (props) => {
                 category={task.category}
                 done={task.done}
                 toggleDone={toggleDone}
+                removeTask={removeTask}
               />
             );
           })}

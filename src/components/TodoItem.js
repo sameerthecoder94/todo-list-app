@@ -1,11 +1,23 @@
 import React from 'react';
 
-const TodoItem = ({ title, category }) => {
+const TodoItem = ({ title, category, done, toggleDone }) => {
   return (
     <div className='task__container'>
       <div className='task__items'>
-        <input className='task__checkbox' type='checkbox' />
-        <p className='task__name'>{title}</p>
+        <input
+          checked={done}
+          className='task__checkbox'
+          type='checkbox'
+          onChange={toggleDone}
+        />
+        <p
+          className='task__name'
+          style={{
+            textDecoration: done === true ? 'line-through' : 'none',
+          }}
+        >
+          {title}
+        </p>
         <div className='task__category'>
           <p className='task__category-title'>{category}</p>
         </div>

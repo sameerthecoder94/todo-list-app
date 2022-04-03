@@ -5,16 +5,19 @@ export const tasks = [
     title: 'Read Atomic Habits',
     category: 'Books',
     id: uuidv4(),
+    done: false,
   },
   {
     title: 'Practice React Code',
     category: 'Learning',
     id: uuidv4(),
+    done: false,
   },
   {
     title: 'Visit granny house',
     category: 'Others',
     id: uuidv4(),
+    done: false,
   },
 ];
 

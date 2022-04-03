@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import { useState } from 'react';
 import { tasks, categories } from '../data';
 import { v4 as uuidv4 } from 'uuid';
@@ -38,6 +39,7 @@ const MainSection = (props) => {
       title: inputValue,
       category: selectedCategory,
       id: uuidv4(),
+      done: false,
     };
 
     const updatedTasks = [...tasksList, newTask];
@@ -72,13 +74,42 @@ const MainSection = (props) => {
         </div>
 
         <div className='task__list'>
-          {filteredTasks.map((task) => (
-            <TodoItem
-              key={task.id}
-              title={task.title}
-              category={task.category}
-            />
-          ))}
+          {filteredTasks.map((task) => {
+            function toggleDone(e) {
+              // map through the tasks and update the done property
+              {
+                /* const updatedTasks = tasksList.map((t) => {
+                if (t.id === task.id) {
+                  return {
+                    ...t,
+                    done: !t.done,
+                  };
+                } else {
+                  return t;
+                }
+              });
+              setTasksList(updatedTasks); */
+              }
+
+              // findIndex returns the index of the task in the tasksList array and update the done property  of the task at that index in the tasksList array  using the spread operator ... and the setTasksList function to update the tasksList array with the updated tasks array
+              const taskIndex = tasksList.findIndex((t) =>
+                t.id === task.id ? true : false
+              );
+              const updatedTasks = [...tasksList];
+              updatedTasks[taskIndex].done = e.target.checked;
+              setTasksList(updatedTasks);
+            }
+
+            return (
+              <TodoItem
+                key={task.id}
+                title={task.title}
+                category={task.category}
+                done={task.done}
+                toggleDone={toggleDone}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

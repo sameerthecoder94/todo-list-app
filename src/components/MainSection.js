@@ -37,7 +37,7 @@ const MainSection = (props) => {
     // console.log('Adding todo item');
     const trimmedInputValue = inputValue.trim();
 
-    if (trimmedInputValue === '' && selectedCategory === '') {
+    if (trimmedInputValue === '' || selectedCategory === '') {
       alert('Please provide a task name and a category');
     } else {
       const newTask = {

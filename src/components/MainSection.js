@@ -63,7 +63,11 @@ const MainSection = (props) => {
           <input
             className='task__input'
             type='text'
-            placeholder="Add a new task inside 'All' category"
+            placeholder={`Add a new task inside '${
+              selectedSidebarCategory === null
+                ? 'All'
+                : selectedSidebarCategory
+            }' category`}
             value={inputValue}
             onChange={handleInputChange}
           />

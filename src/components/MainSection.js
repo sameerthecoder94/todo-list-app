@@ -35,17 +35,23 @@ const MainSection = (props) => {
 
   function addTodoItem(e) {
     // console.log('Adding todo item');
-    const newTask = {
-      title: inputValue,
-      category: selectedCategory,
-      id: uuidv4(),
-      done: false,
-    };
+    const trimmedInputValue = inputValue.trim();
 
-    const updatedTasks = [...tasksList, newTask];
-    setTasksList(updatedTasks);
-    setInputValue(''); // clearing the input field
-    setSelectedCategory(''); // clearing the category selection
+    if (trimmedInputValue === '' && selectedCategory === '') {
+      alert('Please provide a task name and a category');
+    } else {
+      const newTask = {
+        title: trimmedInputValue,
+        category: selectedCategory,
+        id: uuidv4(),
+        done: false,
+      };
+
+      const updatedTasks = [...tasksList, newTask];
+      setTasksList(updatedTasks);
+      setInputValue(''); // clearing the input field
+      setSelectedCategory(''); // clearing the category selection
+    }
   }
 
   return (
